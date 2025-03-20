@@ -1,9 +1,9 @@
 {
-  "name": "Hello Extensions",
-  "description": "HiFiNi Lyric Extension",
+  "name": "HiFiNi Lyric Extensions",
+  "description": "HiFiNi Music BBS Lyrics Extension - HiFiNi.COM",
   "version": "1.0",
   "manifest_version": 3,
-  "permissions": ["declarativeNetRequest"],
+  "permissions": ["scripting"],
   "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
@@ -12,11 +12,10 @@
     }
   ],
   "background": {
-    "service_worker": "background/index.js",
+    "service_worker": "background.js",
     "type": "module"
   },
   "action": {
-    "default_popup": "hello.html",
-    "default_icon": "hello_extensions.png"
+    "default_icon": "logo.png"
   }
 }
