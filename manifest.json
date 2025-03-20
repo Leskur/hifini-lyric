@@ -1,10 +1,10 @@
 {
   "name": "HiFiNi Lyric Extensions",
   "description": "HiFiNi Music BBS Lyrics Extension - HiFiNi.COM",
-  "version": "1.0",
+  "version": "0.0.1",
   "manifest_version": 3,
   "permissions": ["scripting"],
-  "host_permissions": ["<all_urls>"],
+  "host_permissions": ["https://www.hifini.com/*", "https://api.lrc.cx/*"],
   "content_scripts": [
     {
       "matches": ["https://www.hifini.com/thread*"],
