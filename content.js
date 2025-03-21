@@ -34,7 +34,6 @@ function base32Encode(str) {
 }
 
 function initAPlayer(option) {
-  console.debug(option);
   if (option) {
     removeOldAPlayerCSS();
     const ap = new APlayer(option);
@@ -80,7 +79,6 @@ function getAPlayerOption() {
       },
     };
   } catch (e) {
-    console.error(e);
     return null;
   }
 }
@@ -98,7 +96,6 @@ function removeOldAPlayerCSS() {
 chrome.storage.local.get("enabled").then(({ enabled = true }) => {
   if (enabled) {
     const option = getAPlayerOption();
-    console.log("option", option);
     if (option) {
       chrome.runtime.sendMessage(
         {
@@ -109,7 +106,7 @@ chrome.storage.local.get("enabled").then(({ enabled = true }) => {
           },
         },
         (res) => {
-          if (res.lrc) {
+          if (res?.lrc) {
             option.audio.lrc = res.lrc.toString();
             initAPlayer({
               ...option,
