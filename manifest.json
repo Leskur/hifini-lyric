@@ -3,8 +3,8 @@
   "description": "HiFiNi Music BBS Lyrics Extension - HiFiNi.COM",
   "version": "0.0.1",
   "manifest_version": 3,
-  "permissions": ["scripting"],
-  "host_permissions": ["https://www.hifini.com/*", "https://api.lrc.cx/*"],
+  "permissions": ["scripting", "storage"],
+  "host_permissions": ["<all_urls>"],
   "content_scripts": [
     {
       "matches": ["https://www.hifini.com/thread*"],
@@ -12,7 +12,7 @@
     }
   ],
   "background": {
-    "service_worker": "background.js",
+    "service_worker": "background/index.js",
     "type": "module"
   },
   "action": {
