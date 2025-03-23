@@ -4,6 +4,16 @@
 
 HiFiNi Lyric Extension 是一个浏览器拓展程序，用于在 [HiFiNi - 音乐磁场](https://www.hifini.com/) 中展示播放器歌词。
 
+### 如何安装
+
+您可以选择自己喜欢的方法安装
+
+- 方法 1：在浏览器 **拓展程序** 界面打开开发者模式，再将拓展包拖入即可。（版本更新需要重新下载拓展程序，并重复此步骤）
+
+- 方法 2：解压拓展包后，在浏览器 **拓展程序** 界面打开开发者模式，点击**加载已解压的拓展程序**，选择解压的文件夹即可。（需自行管理文件，删除后失效，版本更新同上）
+
+- 方法 3：从 Chrome 应用商店安装 [HiFiNi Lyric Extension](https://chromewebstore.google.com/detail/hifini-lyric-extension/dekilmcbnagacakbhbakjdnaacmmfpdg)（可自动更新版本，需要等待应用商店审核）
+
 ### 使用示例
  - 默认效果
 
@@ -19,6 +29,8 @@ HiFiNi Lyric Extension 是一个浏览器拓展程序，用于在 [HiFiNi - 音�
 - [ ] ...
 
   欢迎提出您的 idea
+
+
 
 ### 工作原理
 
