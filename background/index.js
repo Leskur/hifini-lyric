@@ -27,7 +27,21 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   return true;
 });
 
+let playerWindow;
+
 chrome.action.onClicked.addListener(async (tab) => {
+  chrome.windows
+    .create({
+      tabId: tab.id,
+      url: "player.html",
+      width: 800,
+      height: 600,
+      type: "popup",
+    })
+    .then((window) => {
+      playerWindow = window;
+    });
+
   chrome.storage.local.get("enabled").then(({ enabled = true }) => {
     chrome.storage.local.set({ enabled: !enabled }).then(() => {
       chrome.action.setBadgeText({

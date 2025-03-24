@@ -1,7 +1,7 @@
 chrome.storage.local.get("enabled").then(({ enabled = true }) => {
   if (enabled) {
     const option = HiFiNiThread.getAPlayerOption();
-    console.log(option);
+    console.log(JSON.stringify(option.audio));
     if (option) {
       chrome.runtime.sendMessage(
         {
