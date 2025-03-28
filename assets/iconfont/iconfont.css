@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'hifini-iconfont';  /* Project id 4873979 */
+  src: url('//at.alicdn.com/t/c/font_4873979_5iyr6ug7ctr.woff2?t=1743139277834') format('woff2'),
+       url('//at.alicdn.com/t/c/font_4873979_5iyr6ug7ctr.woff?t=1743139277834') format('woff'),
+       url('//at.alicdn.com/t/c/font_4873979_5iyr6ug7ctr.ttf?t=1743139277834') format('truetype');
+}
+
+.hifini-iconfont {
+  font-family: "hifini-iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-playfill:before {
+  content: "\e74f";
+}
+
+.icon-add:before {
+  content: "\e62f";
+}
+

@@ -13,7 +13,8 @@
   "content_scripts": [
     {
       "matches": ["https://www.hifini.com/thread*"],
-      "js": ["content/thread.js", "content/index.js"]
+      "js": ["content/thread.js", "content/index.js"],
+      "css": ["assets/iconfont/iconfont.css"]
     }
   ],
   "background": {

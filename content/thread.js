@@ -94,4 +94,25 @@ const HiFiNiThread = {
       });
     }
   },
+  insertPlayButton(option) {
+    const icon = document.createElement("i");
+    icon.className = "hifini-iconfont icon-playfill";
+    const a = document.createElement("a");
+    a.innerText = "独立播放器";
+
+    a.insertAdjacentElement("afterbegin", icon);
+    a.href = "javascript:void(0)";
+    document.getElementById("player4").insertAdjacentElement("afterend", a);
+    a.addEventListener("click", async () => {
+      await chrome.runtime.sendMessage({
+        action: "openPlayer",
+      });
+      setTimeout(async () => {
+        await chrome.runtime.sendMessage({
+          action: "windowPlay",
+          option,
+        });
+      }, 500);
+    });
+  },
 };
