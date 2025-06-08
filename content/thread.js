@@ -92,6 +92,11 @@ const HiFiNiThread = {
         ap.container.querySelector(".aplayer-author").innerText += " 播放失败";
         ap.options.audio[0].artist += " 播放失败 ╥﹏╥";
       });
+      ap.on("play", () => {
+        document.querySelectorAll('a').forEach(a => {
+          a.setAttribute("target", "_blank")
+        })
+      })
     }
   },
 };
